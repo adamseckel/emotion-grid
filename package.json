@@ -12,18 +12,15 @@
   "keywords": [
     "emotion",
     "css-in-js",
-    "flexbox",
+    "css-grid",
     "layouts",
     "react"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/hemlok/emotion-box"
+    "url": "https://github.com/hemlok/emotion-grid"
   },
-  "scripts": {
-    "build": "NODE_ENV=production babel src --out-dir lib --source-maps inline --presets=es2015,stage-2",
-    "prepare": "yarn build"
-  },
+  "scripts": {},
   "prettier": {
     "singleQuote": true,
     "trailingComma": "es5",
@@ -44,9 +41,11 @@
     }
   },
   "eslintConfig": {
+    "parser": "typescript-eslint-parser",
     "extends": "react-app",
     "plugins": [
-      "prettier"
+      "prettier",
+      "typescript"
     ],
     "root": true,
     "rules": {
@@ -65,8 +64,12 @@
     "@types/react": "^16.4.14",
     "create-emotion": "^9.2.6",
     "emotion": "^9.2.10",
+    "eslint-plugin-typescript": "^0.12.0",
+    "prettier": "^1.14.3",
     "react": "^16.5.2",
-    "react-emotion": "9.2.10"
+    "react-emotion": "9.2.10",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript-eslint-parser": "^18.0.0"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
